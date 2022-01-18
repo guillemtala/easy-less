@@ -1,0 +1,83 @@
+html {
+    font-size: 16px;
+}
+
+/* clases predefinidas */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: burlywood;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+// REGLAS PARA EL EJERCICIO AQUÍ DEBAJO
+
+@sizeP: 1rem;
+
+p{
+    font-size: @sizeP;
+}
+
+h1{
+    font-size: @sizeP*6;
+}
+h2{
+    font-size: @sizeP*5;
+}
+
+h3{
+    font-size: @sizeP*4;
+}
+
+.border{
+    border-style:solid; 
+    border: @sizeP / 2; 
+    border-color: black; 
+    border-radius: @sizeP * 6;
+}
+
+.margins{
+    margin: 3%;
+}
+
+.flex{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.div1{
+    background-color: yellowgreen;
+    .border();
+    .margins();
+    h2{
+        color: grey;
+    }
+    h3{
+        color: white;
+    }
+}
+
+.div2{
+    background-color: yellow;
+    .border();
+    .margins();
+    .flex();
+    p{
+        color: red;
+    }
+}
